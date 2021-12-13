@@ -1,0 +1,22 @@
+import User, {associate as associateUser} from './user'
+import Comment, {associate as associateComment} from './user'
+import Hashtag, {associate as associateHashtag} from './user'
+import Image, {associate as associateImage} from './user'
+import Post, {associate as associatePost} from './user'
+
+export * from './sequelize';
+const db = {
+  User,
+  Comment,
+  Hashtag,
+  Image,
+  Post
+};
+
+export type dbType = typeof db
+
+associateUser(db)
+associateComment(db)
+associateHashtag(db)
+associateImage(db)
+associatePost(db)
